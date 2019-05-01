@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: Nunito, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: url('/images/background.svg') no-repeat center;
+  background-size: cover;
+
+  main {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+    header {
+      padding-top: 10px;
+
+      span {
+        float: right;
+        color: #007aff;
+        padding: 8px 20px;
+        margin-right: 10px;
+      }
+
+      span:hover {
+        background-color: white;
+        border-radius: 19px;
+        box-shadow: 0 0 10px rgba(0, 122, 255, 0.7);
+        cursor: pointer;
+      }
+    }
+
+    header::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      transform: translate(0, -50%);
+
+      .row {
+        margin-top: -40px;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+
+        .column-2 {
+          width: 50%;
+          padding-left: 10px;
+
+          .item {
+            font-size: 24px;
+            color: rgb(97, 97, 97);
+
+            img {
+              box-sizing: content-box;
+              margin: 0 30px 20px 0;
+              vertical-align: middle;
+              padding: 10px;
+              border-radius: 15px;
+            }
+          }
+
+          .item:nth-child(2) {
+            margin-left: 40px;
+          }
+
+          .item:nth-child(3) {
+            margin-left: 80px;
+          }
+        }
+
+        .topic {
+          .title {
+            margin-top: -30px;
+            font-size: 52px;
+          }
+
+          .subtitle {
+            margin: -50px 0 50px;
+            color: rgb(131, 131, 131);
+          }
+
+          .login {
+            padding: 10px 20px;
+            border-radius: 21px;
+            color: white;
+            text-decoration: none;
+            background-image: linear-gradient(to top right, rgb(34, 229, 255), rgb(12, 126, 255));
+          }
+
+          .login:hover {
+            box-shadow: 0 0 10px rgba(0, 122, 255, 0.7);
+          }
+        }
+
+        .column-5 {
+          width: 20%;
+          text-align: center;
+          font-size: 24px;
+          color: rgb(107, 107, 107);
+          padding: 40px 20px;
+          text-decoration: none;
+          cursor: pointer;
+
+          img {
+            box-sizing: content-box;
+            margin-bottom: 20px;
+          }
+        }
+
+        .column-5:hover {
+          border: 2px solid #64afff;
+          border-radius: 20px;
+          box-shadow: 0 0 10px rgba(0, 122, 255, 0.7);
+          background-color: white;
+          color: #007aff;
+        }
+
+        .column-4 {
+          width: 25%;
+          text-align: center;
+          font-size: 24px;
+          margin: 0 10px;
+          padding: 20px 20px 10px;
+          background-color: white;
+          color: rgb(151, 151, 151);
+          border: 2px solid rgb(214, 214, 214);
+          border-radius: 20px;
+          cursor: pointer;
+
+          input {
+            width: 20px;
+            height: 20px;
+            margin-top: 10px;
+            display: none;
+          }
+        }
+
+        .column-4:hover:not(.active) {
+          color: rgb(0, 212, 0);
+          border-color: rgb(0, 212, 0);
+        }
+
+        .column-4.active {
+          color: rgb(0, 212, 0);
+          border-color: rgb(0, 212, 0);
+        }
+      }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 4em;
+      margin-top: 50px;
+    }
+
+    .question {
+      margin: 40px 0 0 10px;
+
+      span {
+        color: red;
+      }
+    }
+
+    .choose {
+      font-family: Nunito, sans-serif;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 22px;
+      cursor: pointer;
+    }
+
+    .ignore {
+      float: right;
+      margin-top: 40px;
+      margin-right: 10px;
+      padding: 7px 20px;
+      background-color: rgb(255, 56, 56);
+    }
+
+    .ignore:hover {
+      box-shadow: 0 0 10px rgba(255, 56, 56, 0.7);
+    }
+
+    .check {
+      position: absolute;
+      left: 50%;
+      bottom: 100px;
+      transform: translate(-50%, 0);
+      padding: 7px 100px;
+      background-color: rgb(0, 212, 0);
+    }
+
+    input:hover {
+      box-shadow: 0 0 10px rgba(0, 212, 0, 0.7);
+    }
+  }
+}

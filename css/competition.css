@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.panel {
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+}
+
+.panel .container-info>p {
+  margin: 20px 10px 10px;
+  font-size: 18px;
+}
+
+.panel .info {
+  text-align: center;
+  padding: 20px 20px 5px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.panel .info .level {
+  margin-top: 20px;
+  color: #007aff;
+  font-size: 20px;
+}
+
+.panel-left {
+  left: 0;
+  border-right: 1px solid #d1d1d1;
+}
+
+.panel-right {
+  right: 0;
+  border-left: 1px solid #d1d1d1;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container .content {
+  margin: 0 300px;
+}
+
+.container .content h2 {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+.container .content h2 #time {
+  color: red;
+}
+
+/*# sourceMappingURL=competition.css.map */
+
+.line {
+  width: 300px;
+  height: 25px;
+  border-bottom: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.help{
+  font-size: 18px;
+  padding: 0px 20px;
+  height: 30px;
+}
+
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #FDFDFD;
+  width: 100%;
+  margin: 0px;
+
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table.blueTable td,
+table.blueTable th {
+  border: 4px solid #007AFF;
+  padding: 5px 5px;
+  height: 70px;
+}
+
+table.blueTable tbody td {
+  font-size: 13px;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+
+table.blueTable tfoot .links {
+  text-align: right;
+}
+
+table.blueTable tfoot .links a {
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.question{
+  margin: auto;
+  width: 50%;
+  border: 3px solid red;
+  padding: 10px;
+}
+
+.control {
+  font-family: arial;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 20px 0px 5px 400px;
+  padding-top: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+  .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+  }
+.control_indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+  border: 0px solid #000000;
+}
+.control-radio .control_indicator {
+  border-radius: 50%;
+}
+
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+  background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+  background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+  background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control_indicator:after {
+  box-sizing: unset;
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control_indicator:after {
+  display: block;
+}
+.control-radio .control_indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+}
+.control-radio input:disabled ~ .control_indicator:after {
+  background: #7b7b7b;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito">
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <header>
+        <span>Thoát</span>
+      </header>
+
+      <button class="choose ignore">Bỏ qua</button>
+      <h2 class="question">Chọn từ cho " <span>Con mèo</span> "</h2>
+
+      <div class="content">
+        <form action="#" id="checkAnswer">
+          <div class="row">
+            <label class="column-4" onclick="checkAnswer(this)">
+              <img src="/images/cat.jpg" alt="cat" height="200" width="auto">
+              <br>
+              <input type="radio" name="answer" value="cat">
+              Cat
+            </label>
+
+            <label class="column-4" onclick="checkAnswer(this)">
+              <img src="/images/dog.jpg" alt="cat" height="200" width="auto">
+              <br>
+              <input type="radio" name="answer" value="dog">
+              Dog
+            </label>
+
+            <label class="column-4" onclick="checkAnswer(this)">
+              <img src="/images/elephant.jpg" alt="cat" height="200" width="auto">
+              <br>
+              <input type="radio" name="answer" value="elephant">
+              Elephant
+            </label>
+
+            <label class="column-4" onclick="checkAnswer(this)">
+              <img src="/images/tiger.jpg" alt="cat" height="200" width="auto">
+              <br>
+              <input type="radio" name="answer" value="tiger">
+              Tiger
+            </label>
+          </div>
+        </form>
+      </div>
+      <input type="submit" class="choose check" form="checkAnswer" value="Kiểm tra">
+
+      <script>
+        function checkAnswer(radio) {
+          // Remove 'active' class from previous element
+          var element = document.querySelector('.active');
+          if (element != null) {
+            element.classList.remove('active');
+          }
+
+          // Add 'active' class to just checked element
+          radio.classList.add('active');
+        }
+      </script>
+
+      <!-- <div>
+        Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a
+          href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+          href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+          BY</a>
+      </div> -->
+    </main>
+  </div>
+</body>
+
+</html>
